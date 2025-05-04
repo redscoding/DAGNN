@@ -30,7 +30,7 @@ class Batch(Data):
         Additionally, creates assignment batch vectors for each key in
         :obj:`follow_batch`."""
 
-        keys = [set(data.keys) for data in data_list]
+        keys = [set(data.keys()) for data in data_list]  #20250504 修
         keys = list(set.union(*keys))
         assert 'batch' not in keys
 

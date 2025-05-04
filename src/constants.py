@@ -1,6 +1,7 @@
 import os
 
 path = os.path.abspath(__file__)
+path = path.replace('\\', '/')
 path = path[:path.rindex("/")] + "/../"
 PATH = os.path.abspath(path)
 
